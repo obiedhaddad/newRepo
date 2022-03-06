@@ -9,7 +9,7 @@ public class TestThreadCheckArray {
 			int num  = input.nextInt();
 			ArrayList<Integer> arr = new ArrayList<Integer>();
 			System.out.println("Enter numbers for array");
-			
+			//hello
 			for (int index = 0; index < num; index++) 
 				arr.add(index, null); = input.nextInt();
 			
