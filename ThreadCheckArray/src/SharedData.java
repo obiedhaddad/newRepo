@@ -1,13 +1,15 @@
+import java.util.ArrayList;
+
 public class SharedData 
 {
-	private int [] array;
+	private ArrayList<Integer> arr;
 	private boolean [] winArray;
 	private boolean flag;
 	private final int b;
 	
-	public SharedData(int[] array, int b) {
+	public SharedData(ArrayList<Integer> arr, int b) {
 		
-		this.array = array;
+		this.arr = arr;
 		this.b = b;
 	}
 
@@ -21,9 +23,9 @@ public class SharedData
 		this.winArray = winArray;
 	}
 
-	public int[] getArray() 
+	public ArrayList<Integer> getArray() 
 	{
-		return array;
+		return arr;
 	}
 
 	public int getB() 

@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
+
 public class TestThreadCheckArray {
 	public static void main(String[] args) {
 		try (Scanner input = new Scanner(System.in)) {
@@ -9,19 +10,14 @@ public class TestThreadCheckArray {
 			int num  = input.nextInt();
 			ArrayList<Integer> arr = new ArrayList<Integer>();
 			System.out.println("Enter numbers for array");
-			//hello
-			//hello amr
-			//asdawdwadawdwad
-			///sfdsefsefsefsef
-			//sefsefsef
-			//sefsefsefsef
 			for (int index = 0; index < num; index++) 
-				arr.add(index, null); = input.nextInt();
+				arr.add(input.nextInt());
+
 			
 			System.out.println("Enter number");
 			num = input.nextInt();
 			
-			SharedData sd = new SharedData(array, num);
+			SharedData sd = new SharedData(arr, num);
 			
 			thread1 = new Thread(new ThreadCheckArray(sd), "thread1");
 			thread2 = new Thread(new ThreadCheckArray(sd), "thread2");
@@ -41,9 +37,9 @@ public class TestThreadCheckArray {
 				System.out.println("Sorry");
 				return;
 			}
-			System.out.println("Solution for b : " + sd.getB() + ",n = " + sd.getArray().length);
+			System.out.println("Solution for b : " + sd.getB() + ",n = " + sd.getArray().size());
 			System.out.print("I:    ");
-			for(int index = 0; index < sd.getArray().length ; index++)
+			for(int index = 0; index < sd.getArray().size() ; index++)
 				System.out.print(index + "    ");
 			System.out.println();
 			System.out.print("A:    ");
