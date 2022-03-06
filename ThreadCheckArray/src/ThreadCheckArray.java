@@ -17,6 +17,10 @@ public class ThreadCheckArray implements Runnable
 		winArray = new boolean[array.length];
 	}
 	
+	/**
+	 * @param n
+	 * @param b
+	 */
 	void rec(int n, int b)
 	{
 		synchronized (sd) 
