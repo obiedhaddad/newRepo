@@ -32,7 +32,7 @@ public class ThreadCheckArray implements Runnable
 		}	
 		if (n == 1)
 		{
-			if(b == 0 || b == array.get(array.size()-1))
+			if(b == 0 || b == array.get(n-1))
 			{
 				flag = true;
 				synchronized (sd) 
@@ -40,12 +40,12 @@ public class ThreadCheckArray implements Runnable
 					sd.setFlag(true);
 				}			
 			}
-			if (b == array.get(array.size()-1))
+			if (b == array.get(n-1))
 				winArray[n-1] = true;
 			return;
 		}
 		
-		rec(n-1, b - array.get(array.size()-1));
+		rec(n-1, b - array.get(n-1));
 		if (flag)
 			winArray[n-1] = true;
 		synchronized (sd) 
