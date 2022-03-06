@@ -12,6 +12,9 @@ public class TestThreadCheckArray {
 			//hello
 			//hello amr
 			//asdawdwadawdwad
+			///sfdsefsefsefsef
+			//sefsefsef
+			//sefsefsefsef
 			for (int index = 0; index < num; index++) 
 				arr.add(index, null); = input.nextInt();
 			
